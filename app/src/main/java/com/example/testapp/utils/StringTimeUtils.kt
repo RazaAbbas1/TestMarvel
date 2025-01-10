@@ -11,4 +11,9 @@ object StringTimeUtils {
     }
 
     fun getTimeStamp() = "" + System.currentTimeMillis()/1000
+
+
+    fun String.addHttpsUrl(): String{
+        return "https" + this.substring(4, this.length)
+    }
 }

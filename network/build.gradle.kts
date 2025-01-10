@@ -18,6 +18,7 @@ val localProperties = Properties().apply {
 android {
   namespace = "com.sample.app.network"
   compileSdk = 35
+
   kotlinOptions {
     jvmTarget = "1.8"
   }
@@ -25,6 +26,8 @@ android {
   android.buildFeatures.buildConfig = true
 
   defaultConfig {
+    minSdk = 24
+
     buildConfigField("String", "PUBLIC_API_KEY", "\"${localProperties.getProperty("PUBLIC_API_KEY")}\"")
     buildConfigField("String", "PRIVATE_API_KEY", "\"${localProperties.getProperty("PRIVATE_API_KEY")}\"")
   }

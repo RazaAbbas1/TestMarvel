@@ -47,7 +47,7 @@ class CharactersViewModel @Inject constructor(
       repo.getMarvelCategories()
         .collect { result ->
           // Handle success or failure and update the state
-          if (result != null && result.isNotEmpty()) {
+          if (!result.isNullOrEmpty()) {
             _charactersState.value = CharactersState.Success(result)
           } else {
             _charactersState.value = CharactersState.Error("No categories found")

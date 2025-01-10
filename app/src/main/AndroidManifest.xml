@@ -16,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestApp"
         tools:targetApi="31"
-        tools:overrideLibrary="dagger.hilt.android">
+        tools:overrideLibrary="dagger.hilt.android"
+        >
         <activity
             android:name=".MainActivity"
             android:exported="true"
